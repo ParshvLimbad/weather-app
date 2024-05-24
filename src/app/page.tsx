@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import SearchIcon from "@mui/icons-material/Search";
 
 let WEATHER_API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
 
@@ -26,9 +27,18 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex justify-center items-center">
-        <div className="h-[500px] w-[20%] flex justify-center items-center bg-red-400">
-          <h1>Hello</h1>
+      <main className="flex justify-center items-center h-screen">
+        <div className="h-[500px] w-[20%] flex justify-center items-center bg-red-400 rounded-lg bg-gradient-to-t from-custom-blue-start to-custom-blue-end p-10">
+          <div id="search">
+            <input
+              className="outline-none rounded-full h-[35px] p-4"
+              placeholder="Search for city weather"
+              onChange={(e) => setPlace(e.target.value)}
+            />
+            <button onClick={getWeatherData}>
+              <SearchIcon style={{ color: "black", marginRight: "10px" }} />
+            </button>
+          </div>
         </div>
       </main>
     </>
