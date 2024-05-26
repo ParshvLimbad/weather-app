@@ -139,7 +139,10 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col justify-center items-center scale-90 text-white">
-            <a target="_blank" href="https://github.com/ParshvLimbad">
+            <a
+              target="_blank"
+              href="https://github.com/ParshvLimbad/weather-app"
+            >
               <GitHubIcon style={{ height: "25px", width: "auto" }} />
             </a>
             <p>By Parshv Limbad</p>
